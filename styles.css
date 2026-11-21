@@ -140,17 +140,17 @@ h2 { font-size: clamp(2.1rem, 4.1vw, 3.1rem); }
 
 .hero-actions {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: .75rem 1.4rem;
+  gap: clamp(.5rem, 2vw, 1.4rem);
   margin-top: 1.7rem;
 }
 
 .button {
   display: inline-block;
+  flex: none;
   background: var(--lime);
   color: var(--pine-dark);
-  padding: .7rem 1.1rem;
+  padding: .7rem clamp(.65rem, 2vw, 1.1rem);
   border-radius: .3rem;
   text-decoration: none;
   font-weight: 700;
@@ -158,6 +158,7 @@ h2 { font-size: clamp(2.1rem, 4.1vw, 3.1rem); }
 
 .button:hover { background: #e6f6c7; }
 .button span { font-size: .85rem; font-weight: 600; }
+.email { font-size: .9375rem; }
 .email, .footer-inner a { overflow-wrap: anywhere; }
 
 .portrait img {
@@ -286,7 +287,7 @@ footer {
 .footer-inner p + p { margin-top: .3rem; }
 
 @media (max-width: 48rem) {
-  .hero-inner { grid-template-columns: minmax(0, 1fr) minmax(10rem, 13rem); gap: 2rem; }
+  .hero-inner { grid-template-columns: minmax(0, 1fr) minmax(10rem, 12rem); gap: 2rem; }
   .section-grid, .publication { grid-template-columns: 1fr; }
 }
 
