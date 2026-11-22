@@ -79,11 +79,16 @@ a:hover { color: var(--link-hover); }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(8rem, 24vw, 11.5rem);
+  grid-template-columns: minmax(0, 1fr) clamp(8.5rem, 26vw, 12.5rem);
+  grid-template-areas:
+    "bio portrait"
+    "contact contact";
   align-items: start;
-  gap: 1.5rem 2rem;
+  gap: 1.15rem 2rem;
   padding-block: clamp(1.75rem, 5vw, 2.75rem);
 }
+
+.hero-copy { grid-area: bio; }
 
 h1 {
   font-size: clamp(2.25rem, 6vw, 3.25rem);
@@ -100,6 +105,7 @@ h1 {
 .hero-intro { margin-top: 1rem; }
 
 .portrait {
+  grid-area: portrait;
   display: block;
   width: 100%;
   height: auto;
@@ -107,10 +113,11 @@ h1 {
 }
 
 .contact-links {
+  grid-area: contact;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: clamp(.25rem, 1.5vw, .65rem);
-  margin-top: 1rem;
 }
 
 .contact-links a {
@@ -174,6 +181,9 @@ footer {
 }
 
 @media (max-width: 34rem) {
-  .hero { grid-template-columns: 1fr; }
-  .portrait { width: 8.5rem; }
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "bio" "contact" "portrait";
+  }
+  .portrait { width: 9.25rem; }
 }
