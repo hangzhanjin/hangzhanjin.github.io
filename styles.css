@@ -79,7 +79,7 @@ a:hover { color: var(--link-hover); }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(7rem, 22vw, 10rem);
+  grid-template-columns: minmax(0, 1fr) clamp(8rem, 24vw, 11.5rem);
   align-items: start;
   gap: 1.5rem 2rem;
   padding-block: clamp(1.75rem, 5vw, 2.75rem);
@@ -163,5 +163,5 @@ footer {
 
 @media (max-width: 34rem) {
   .hero { grid-template-columns: 1fr; }
-  .portrait { width: 7.5rem; }
+  .portrait { width: 8.5rem; }
 }
